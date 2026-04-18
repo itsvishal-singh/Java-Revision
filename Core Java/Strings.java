@@ -35,5 +35,9 @@ public class Strings {
     String strr = stringBuilder.toString();
     StringBuffer sbr = new StringBuffer(strr);
     System.out.println(sbr);
+
+    // inserting String 
+    sbr.insert(9, "Java ");
+    System.out.println(sbr);
   }
 }
