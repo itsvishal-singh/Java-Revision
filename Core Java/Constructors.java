@@ -8,12 +8,12 @@ class Humann {
   private int age;
   private String name;
 
-  public Humann() {
+  public Humann() { // Default Constructor
     age = 34;
     name = "John";
   }
 
-  public Humann(int age, String name) {
+  public Humann(int age, String name) { // Parameterized Constructor
     this.age = age;
     this.name = name;
   }
