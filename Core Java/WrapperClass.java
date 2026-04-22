@@ -3,7 +3,7 @@ public class WrapperClass {
     int num = 7;
     Integer num1 = num; // Auto-Boxing
 
-    int num2 = num1;
+    int num2 = num1;  // Auto-Unboxing
     System.out.println(num2);
 
     String str = "12";
