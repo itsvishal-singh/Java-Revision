@@ -4,8 +4,12 @@ enum Status {
 
 public class Enumeration {
   public static void main(String[] args) {
+
     Status s = Status.Failed;
+
     System.out.println(s + " : " + s.ordinal());
+
+    System.out.println(s.getClass().getSuperclass());
 
     Status[] ss = Status.values();
     // System.out.println(ss[2]);
@@ -47,5 +51,7 @@ public class Enumeration {
       case Pending -> System.out.println("Please Wait");
       default -> System.out.println("Done");
     }
+
+
   }
 }
