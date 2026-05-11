@@ -35,12 +35,8 @@ public class JDBCUtility {
             e.printStackTrace();
         } catch (Exception e) {
         } finally {
-            try {
-                // Close the resources
-                jdbcUtil.closeConnection(connection, statement);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            // Close the resources
+            jdbcUtil.closeConnection(connection, statement);
         }
     }
 }

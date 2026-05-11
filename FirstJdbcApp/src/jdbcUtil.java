@@ -1,7 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class jdbcUtil {
     static {
@@ -20,10 +17,20 @@ public class jdbcUtil {
         return DriverManager.getConnection(url, user, password);
 
     }
-    public static void closeConnection(Connection connection, Statement statement) throws SQLException{
+    public static void closeConnection(Connection connection, Statement statement){
             // Close the resources
-            statement.close();
-            connection.close();
+        try{
+//            if(resultSet!= null)
+//                resultSet.close();
+            if(statement!= null)
+                statement.close();
+            if(connection!= null)
+                connection.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+
 
     }
 }
